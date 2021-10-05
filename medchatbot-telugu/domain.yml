@@ -1,0 +1,78 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- what_is_corona:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- concern:
+    use_entities: true
+- prevention:
+    use_entities: true
+- Vaccination:
+    use_entities: true
+- incubation:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: హే! కరోనావైరస్ గురించి నేను మీకు ఎలా సహాయం చేయగలను?
+  utter_corona:
+  - text: COVID-19 మీ lung పిరితిత్తులు మరియు వాయుమార్గాలను ప్రభావితం చేసే కొత్త అనారోగ్యం. ఇది కరోనావైరస్ అనే వైరస్ వల్ల వస్తుంది. COVID-19 అనేది 2019 డిసెంబర్‌లో చైనాలో ఉద్భవించిన కొత్త కరోనావైరస్ వల్ల కలిగే వ్యాధి.
+  utter_symptoms:
+  - text: COVID-19 లక్షణాలలో దగ్గు, జ్వరం మరియు short పిరి ఉంటుంది.
+  utter_concern:
+  - text: అవును, ఇటీవలి సమాచారం నుండి COVID-19 వ్యక్తి నుండి వ్యక్తికి పంపబడవచ్చని సూచిస్తుంది. కమ్యూనిటీ వ్యాప్తి కూడా కనిపిస్తుంది. కమ్యూనిటీ స్ప్రెడ్ అంటే ప్రజలు ఒక నిర్దిష్ట ప్రాంతంలో వైరస్ బారిన పడ్డారని, వారు ఎలా లేదా ఎక్కడ వ్యాధి బారిన పడ్డారో తెలియని కొంతమంది వ్యక్తులతో సహా. COVID-19 చైనా అంతటా మరియు యునైటెడ్ స్టేట్స్ సహా 100 కి పైగా దేశాలలో కనుగొనబడింది.
+  utter_prevent:
+  - text: 'కనీసం 20 సెకన్ల పాటు మీ చేతులను తరచుగా మరియు పూర్తిగా కడగాలి, సబ్బు మరియు నీరు అందుబాటులో లేకపోతే ఆల్కహాల్ ఆధారిత హ్యాండ్ శానిటైజర్ వాడండి. ఒక కణజాలంతో దగ్గు మరియు తుమ్ములను కప్పండి, తరువాత కణజాలాన్ని చెత్తలో వేయండి. కడుక్కోని చేతులతో మీ కళ్ళు, ముక్కు లేదా నోటిని తాకడం మానుకోండి. మీరు అనారోగ్యంతో ఉన్నప్పుడు ఇంట్లో ఉండండి. ప్రజలు తరచుగా తాకిన ఉపరితలాలు మరియు వస్తువులను శుభ్రపరచండి మరియు క్రిమిసంహారక చేయండి. కరోనావైరస్తో మిమ్మల్ని సంప్రదించకుండా ఉండటానికి మీ ముఖాన్ని ముసుగుతో కప్పండి. '
+  utter_Vaccination:
+  - text: అవును, టీకా ఉంది.
+  utter_incubation:
+  - text: వైరస్కు గురైన 14 రోజుల్లోపు ప్రజలలో లక్షణాలు కనిపిస్తున్నట్లు కనిపిస్తోంది.
+  utter_thanks:
+  - text: మీకు స్వాగతం మరియు సురక్షితంగా ఉండండి.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'మిమ్మల్ని ఉత్సాహపరిచే విషయం ఇక్కడ ఉంది:'
+  utter_did_that_help:
+  - text: అది మీకు సహాయం చేసిందా?
+  utter_happy:
+  - text: గొప్ప, కొనసాగించండి!
+  utter_goodbye:
+  - text: బై
+  utter_iamabot:
+  - text: నేను రాసా చేత శక్తినిచ్చే బోట్.
+actions:
+- utter_greet
+- utter_corona
+- utter_symptoms
+- utter_concern
+- utter_prevent
+- utter_incubation
+- utter_Vaccination
+- utter_thanks
+- utter_iamabot
+- utter_goodbye
+forms: {}
+e2e_actions: []

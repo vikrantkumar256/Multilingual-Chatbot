@@ -1,0 +1,78 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- what_is_corona:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- concern:
+    use_entities: true
+- prevention:
+    use_entities: true
+- Vaccination:
+    use_entities: true
+- incubation:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: আরে! আমি কিভাবে আপনাকে সাহায্য করতে পারে?
+  utter_corona:
+  - text: কোভিড -১ একটি নতুন অসুস্থতা যা আপনার ফুসফুস এবং শ্বাসনালিকে প্রভাবিত করতে পারে। এটি করোনাভাইরাস নামক একটি ভাইরাস দ্বারা সৃষ্ট। কোভিড -১ is হল নতুন করোনাভাইরাস দ্বারা সৃষ্ট রোগ যা ২০১ December সালের ডিসেম্বরে চীনে আবির্ভূত হয়েছিল।
+  utter_symptoms:
+  - text: কোভিড -১ লক্ষণ এর লক্ষণগুলির মধ্যে রয়েছে কাশি, জ্বর এবং শ্বাসকষ্ট।
+  utter_concern:
+  - text: হ্যাঁ, সাম্প্রতিক তথ্য থেকে বোঝা যায় যে কোভিড -১ person ব্যক্তি থেকে অন্য ব্যক্তিতে প্রেরণ করা যেতে পারে। সম্প্রদায়ের বিস্তারও দেখা যাচ্ছে। কমিউনিটি স্প্রেড মানে মানুষ একটি নির্দিষ্ট এলাকায় ভাইরাস দ্বারা সংক্রমিত হয়েছে, কিছু মানুষ সহ যারা নিশ্চিত না কিভাবে বা কোথায় তারা সংক্রমিত হয়েছে। কোভিড -১ has সনাক্ত করা হয়েছে চীন জুড়ে এবং মার্কিন যুক্তরাষ্ট্র সহ আরও ১০০ টিরও বেশি দেশে।
+  utter_prevent:
+  - text: 'কমপক্ষে ২০ সেকেন্ডের জন্য ঘন ঘন এবং পুঙ্খানুপুঙ্খভাবে আপনার হাত ধুয়ে নিন, যদি সাবান এবং জল না পাওয়া যায় তবে অ্যালকোহল ভিত্তিক হ্যান্ড স্যানিটাইজার ব্যবহার করুন। একটি টিস্যু দিয়ে কাশি এবং হাঁচি Cেকে রাখুন, তারপর টিস্যুকে আবর্জনায় ফেলে দিন। ধোয়া হাত দিয়ে আপনার চোখ, নাক বা মুখ স্পর্শ করা এড়িয়ে চলুন। অসুস্থ হলে বাড়িতে থাকুন। ভূপৃষ্ঠ এবং বস্তুগুলিকে পরিষ্কার এবং জীবাণুমুক্ত করে যা মানুষ ঘন ঘন স্পর্শ করে। করোনাভাইরাসের সংস্পর্শ থেকে নিজেকে বাঁচাতে মুখোশ দিয়ে মুখ Cেকে রাখুন।' 
+  utter_Vaccination:
+  - text: হ্যাঁ ভ্যাকসিন আছে।
+  utter_incubation:
+  - text: দেখা যাচ্ছে যে ভাইরাসের সংস্পর্শে আসার 14 দিনের মধ্যে মানুষের মধ্যে লক্ষণ দেখা যাচ্ছে।
+  utter_thanks:
+  - text: আপনাকে স্বাগতম এবং নিরাপদে থাকুন।
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'আপনাকে উৎসাহিত করার জন্য এখানে কিছু আছে:'
+  utter_did_that_help:
+  - text: এটা কি আপনাকে সাহায্য করেছে?
+  utter_happy:
+  - text: দারুণ, চালিয়ে যান!
+  utter_goodbye:
+  - text: বাই
+  utter_iamabot:
+  - text: আমি একটি বট, রাসা দ্বারা চালিত।
+actions:
+- utter_greet
+- utter_corona
+- utter_symptoms
+- utter_concern
+- utter_prevent
+- utter_incubation
+- utter_Vaccination
+- utter_thanks
+- utter_iamabot
+- utter_goodbye
+forms: {}
+e2e_actions: []

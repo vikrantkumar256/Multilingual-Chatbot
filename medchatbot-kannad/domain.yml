@@ -1,0 +1,78 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- what_is_corona:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- concern:
+    use_entities: true
+- prevention:
+    use_entities: true
+- Vaccination:
+    use_entities: true
+- incubation:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: ಹೇ! ನಾನು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಲಿ?
+  utter_corona:
+  - text: ಕೋವಿಡ್ -19 ನಿಮ್ಮ ಶ್ವಾಸಕೋಶ ಮತ್ತು ವಾಯುಮಾರ್ಗಗಳ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುವ ಹೊಸ ಅನಾರೋಗ್ಯ. ಇದು ಕರೋನವೈರಸ್ ಎಂಬ ವೈರಸ್ ನಿಂದ ಉಂಟಾಗುತ್ತದೆ. ಕೋವಿಡ್ -19 ಡಿಸೆಂಬರ್ 2019 ರಲ್ಲಿ ಚೀನಾದಲ್ಲಿ ಹೊರಹೊಮ್ಮಿದ ಹೊಸ ಕರೋನವೈರಸ್‌ನಿಂದ ಉಂಟಾಗುವ ಕಾಯಿಲೆಯಾಗಿದೆ.
+  utter_symptoms:
+  - text: ಕೋವಿಡ್ -19 ರೋಗಲಕ್ಷಣಗಳಲ್ಲಿ ಕೆಮ್ಮು, ಜ್ವರ ಮತ್ತು ಉಸಿರಾಟದ ತೊಂದರೆ ಸೇರಿವೆ.
+  utter_concern:
+  - text: ಹೌದು, ಇತ್ತೀಚಿನ ಮಾಹಿತಿಯಿಂದ ಕೋವಿಡ್ -19 ವ್ಯಕ್ತಿಯಿಂದ ವ್ಯಕ್ತಿಗೆ ಹರಡಬಹುದು ಎಂದು ಸೂಚಿಸುತ್ತದೆ. ಸಮುದಾಯದ ಹರಡುವಿಕೆಯನ್ನು ಸಹ ನೋಡಲಾಗುತ್ತಿದೆ. ಸಮುದಾಯ ಹರಡುವಿಕೆ ಎಂದರೆ ಜನರು ನಿರ್ದಿಷ್ಟ ಪ್ರದೇಶದಲ್ಲಿ ವೈರಸ್ ಸೋಂಕಿಗೆ ಒಳಗಾಗಿದ್ದಾರೆ, ಕೆಲವು ಜನರು ಹೇಗೆ ಅಥವಾ ಎಲ್ಲಿ ಸೋಂಕಿಗೆ ಒಳಗಾದರು ಎಂದು ಖಚಿತವಾಗಿಲ್ಲ. ಕೋವಿಡ್ -19 ಚೀನಾದಾದ್ಯಂತ ಮತ್ತು ಅಮೆರಿಕ ಸೇರಿದಂತೆ 100 ಕ್ಕೂ ಹೆಚ್ಚು ಇತರ ದೇಶಗಳಲ್ಲಿ ಪತ್ತೆಯಾಗಿದೆ.
+  utter_prevent:
+  - text: ಕನಿಷ್ಠ 20 ಸೆಕೆಂಡುಗಳ ಕಾಲ ನಿಮ್ಮ ಕೈಗಳನ್ನು ಆಗಾಗ್ಗೆ ಮತ್ತು ಚೆನ್ನಾಗಿ ತೊಳೆಯಿರಿ, ಸೋಪ್ ಮತ್ತು ನೀರು ಲಭ್ಯವಿಲ್ಲದಿದ್ದರೆ ಆಲ್ಕೋಹಾಲ್ ಆಧಾರಿತ ಹ್ಯಾಂಡ್ ಸ್ಯಾನಿಟೈಜರ್ ಬಳಸಿ. ಕೆಮ್ಮು ಮತ್ತು ಸೀನುಗಳನ್ನು ಅಂಗಾಂಶದಿಂದ ಮುಚ್ಚಿ, ನಂತರ ಅಂಗಾಂಶವನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ಎಸೆಯಿರಿ. ತೊಳೆಯದ ಕೈಗಳಿಂದ ನಿಮ್ಮ ಕಣ್ಣು, ಮೂಗು ಅಥವಾ ಬಾಯಿಯನ್ನು ಮುಟ್ಟುವುದನ್ನು ತಪ್ಪಿಸಿ. ನಿಮಗೆ ಅನಾರೋಗ್ಯವಾದಾಗ ಮನೆಯಲ್ಲೇ ಇರಿ. ಜನರು ಆಗಾಗ್ಗೆ ಸ್ಪರ್ಶಿಸುವ ಮೇಲ್ಮೈ ಮತ್ತು ವಸ್ತುಗಳನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ಮತ್ತು ಸೋಂಕುರಹಿತಗೊಳಿಸಿ. ಕರೋನವೈರಸ್ ಸಂಪರ್ಕಕ್ಕೆ ಬರದಂತೆ ನಿಮ್ಮ ಮುಖವನ್ನು ಮಾಸ್ಕ್‌ನಿಂದ ಮುಚ್ಚಿಕೊಳ್ಳಿ. '
+  utter_Vaccination:
+  - text: ಹೌದು ಲಸಿಕೆ ಇದೆ.
+  utter_incubation:
+  - text: ವೈರಸ್‌ಗೆ ಒಡ್ಡಿಕೊಂಡ 14 ದಿನಗಳಲ್ಲಿ ಜನರಲ್ಲಿ ರೋಗಲಕ್ಷಣಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತಿವೆ.
+  utter_thanks:
+  - text: ನಿಮಗೆ ಸ್ವಾಗತವಿದೆ ಮತ್ತು ಸುರಕ್ಷಿತವಾಗಿರಿ.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'ನಿಮ್ಮನ್ನು ಹುರಿದುಂಬಿಸಲು ಇಲ್ಲಿದೆ:'
+  utter_did_that_help:
+  - text: ಅದು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಿದೆ?
+  utter_happy:
+  - text: ಅದ್ಭುತವಾಗಿದೆ, ಮುಂದುವರಿಯಿರಿ!
+  utter_goodbye:
+  - text: ಬೈ
+  utter_iamabot:
+  - text: ನಾನು ಬೋಟ್ ಆಗಿದ್ದೇನೆ, ರಾಸನಿಂದ ಚಾಲಿತವಾಗಿದೆ.
+actions:
+- utter_greet
+- utter_corona
+- utter_symptoms
+- utter_concern
+- utter_prevent
+- utter_incubation
+- utter_Vaccination
+- utter_thanks
+- utter_iamabot
+- utter_goodbye
+forms: {}
+e2e_actions: []

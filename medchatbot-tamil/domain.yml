@@ -1,0 +1,78 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- what_is_corona:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- concern:
+    use_entities: true
+- prevention:
+    use_entities: true
+- Vaccination:
+    use_entities: true
+- incubation:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: ஏய்! நான் உங்களுக்கு எவ்வாறு உதவலாம்?
+  utter_corona:
+  - text: கோவிட் -19 என்பது உங்கள் நுரையீரல் மற்றும் காற்றுப்பாதைகளை பாதிக்கும் ஒரு புதிய நோய். இது கொரோனா வைரஸ் என்ற வைரஸால் ஏற்படுகிறது. கோவிட் -19 என்பது 2019 டிசம்பரில் சீனாவில் தோன்றிய புதிய கொரோனா வைரஸால் ஏற்படும் நோய்.
+  utter_symptoms:
+  - text: COVID-19 அறிகுறிகளில் இருமல், காய்ச்சல் மற்றும் மூச்சுத் திணறல் ஆகியவை அடங்கும்.
+  utter_concern:
+  - text: ஆம், சமீபத்திய தகவல்களிலிருந்து COVID-19 நபருக்கு நபர் அனுப்பப்படலாம் என்பதைக் குறிக்கிறது. சமூக பரவலும் காணப்படுகிறது. சமூக பரவல் என்பது ஒரு குறிப்பிட்ட பகுதியில் மக்கள் எவ்வாறு அல்லது எங்கு பாதிக்கப்பட்டார்கள் என்று உறுதியாக தெரியாத நபர்கள் உட்பட ஒரு குறிப்பிட்ட பகுதியில் மக்கள் வைரஸால் பாதிக்கப்பட்டுள்ளனர். COVID-19 சீனா முழுவதிலும் உள்ள மக்கள் மற்றும் அமெரிக்கா உட்பட 100 க்கும் மேற்பட்ட நாடுகளில் கண்டறியப்பட்டுள்ளது.
+  utter_prevent:
+  - text: 'குறைந்தது 20 விநாடிகளுக்கு உங்கள் கைகளை அடிக்கடி மற்றும் நன்கு கழுவுங்கள், சோப்பு மற்றும் தண்ணீர் கிடைக்காவிட்டால் ஆல்கஹால் சார்ந்த கை சுத்திகரிப்பாளரைப் பயன்படுத்துங்கள். இருமல் மற்றும் தும்மலை ஒரு திசுவுடன் மூடி, பின்னர் திசுவை குப்பையில் எறியுங்கள். கழுவப்படாத கைகளால் கண்கள், மூக்கு அல்லது வாயைத் தொடுவதைத் தவிர்க்கவும். நீங்கள் நோய்வாய்ப்பட்டிருக்கும்போது வீட்டிலேயே இருங்கள். மக்கள் அடிக்கடி தொடும் மேற்பரப்புகளையும் பொருட்களையும் சுத்தம் செய்து கிருமி நீக்கம் செய்யுங்கள். கொரோனா வைரஸுடன் தொடர்பு கொள்ளாமல் தடுக்க முகத்தை முகமூடியால் மூடுங்கள். '
+  utter_Vaccination:
+  - text: ஆம், தடுப்பூசி உள்ளது.
+  utter_incubation:
+  - text: வைரஸ் பாதிப்புக்குள்ளான 14 நாட்களுக்குள் அறிகுறிகள் மக்களிடையே காணப்படுவதாகத் தெரிகிறது.
+  utter_thanks:
+  - text: நீங்கள் வரவேற்கப்படுகிறீர்கள், பாதுகாப்பாக இருங்கள்.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'இங்கே உங்களை உற்சாகப்படுத்த ஏதாவது இருக்கிறது:'
+  utter_did_that_help:
+  - text: அது உங்களுக்கு உதவியதா?
+  utter_happy:
+  - text: சிறந்தது, தொடருங்கள்!
+  utter_goodbye:
+  - text: வருகிறேன்
+  utter_iamabot:
+  - text: நான் ஒரு போட், ராசாவால் இயக்கப்படுகிறது.
+actions:
+- utter_greet
+- utter_corona
+- utter_symptoms
+- utter_concern
+- utter_prevent
+- utter_incubation
+- utter_Vaccination
+- utter_thanks
+- utter_iamabot
+- utter_goodbye
+forms: {}
+e2e_actions: []

@@ -1,0 +1,78 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- what_is_corona:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- concern:
+    use_entities: true
+- prevention:
+    use_entities: true
+- Vaccination:
+    use_entities: true
+- incubation:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: अरे! मैं आपकी कैसे सहायता कर सकता हूँ?
+  utter_corona:
+  - text: कोविड-19 एक नई बीमारी है जो आपके फेफड़ों और वायुमार्ग को प्रभावित कर सकती है। यह कोरोनावायरस नामक वायरस के कारण होता है। कोविड-19 दिसंबर 2019 में चीन में उभरे नए कोरोनावायरस के कारण होने वाली बीमारी है।
+  utter_symptoms:
+  - text: कोविड-19 लक्षणों में खांसी, बुखार और सांस की तकलीफ शामिल हैं।
+  utter_concern:
+  - text: हां, हाल की जानकारी से संकेत मिलता है कि कोविड-19 एक व्यक्ति से दूसरे व्यक्ति में फैल सकता है। कम्युनिटी स्प्रेड भी देखा जा रहा है। सामुदायिक प्रसार का अर्थ है कि लोग किसी विशेष क्षेत्र में वायरस से संक्रमित हो गए हैं, जिनमें कुछ ऐसे लोग भी शामिल हैं जो सुनिश्चित नहीं हैं कि वे कैसे या कहाँ से संक्रमित हुए। कोविड-19 पूरे चीन में और संयुक्त राज्य अमेरिका सहित 100 से अधिक अन्य देशों में लोगों में पाया गया है।
+  utter_prevent:
+  - text: कम से कम 20 सेकंड के लिए अपने हाथों को बार-बार और अच्छी तरह से धोएं, अगर साबुन और पानी उपलब्ध नहीं है तो अल्कोहल-आधारित हैंड सैनिटाइज़र का उपयोग करें। खांसने और छींकने को टिश्यू से ढकें, फिर टिश्यू को कूड़ेदान में फेंक दें। बिना धुले हाथों से अपनी आंख, नाक या मुंह को छूने से बचें। जब आप बीमार हों तो घर पर रहें। साफ और कीटाणुरहित सतहों और वस्तुओं को लोग अक्सर छूते हैं। अपने आप को कोरोनावायरस के संपर्क में आने से बचाने के लिए अपने चेहरे को मास्क से ढकें।
+  utter_Vaccination:
+  - text: क्षमा करें, कोई टीका नहीं है।
+  utter_incubation:
+  - text: ऐसा प्रतीत होता है कि वायरस के संपर्क में आने के 14 दिनों के भीतर लोगों में लक्षण दिखाई दे रहे हैं।
+  utter_thanks:
+  - text: आपका स्वागत है और सुरक्षित रहें।
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: यहां आपको उत्साहित करने के लिए कुछ है|
+  utter_did_that_help:
+  - text: क्या इससे आपको मदद मिली?
+  utter_happy:
+  - text: बढ़िया, जारी रखो!
+  utter_goodbye:
+  - text: अलविदा
+  utter_iamabot:
+  - text: मैं एक बॉट हूं, जो रासा द्वारा संचालित है।
+actions:
+- utter_greet
+- utter_corona
+- utter_symptoms
+- utter_concern
+- utter_prevent
+- utter_incubation
+- utter_Vaccination
+- utter_thanks
+- utter_iamabot
+- utter_goodbye
+forms: {}
+e2e_actions: []

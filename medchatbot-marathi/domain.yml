@@ -1,0 +1,78 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- what_is_corona:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- concern:
+    use_entities: true
+- prevention:
+    use_entities: true
+- Vaccination:
+    use_entities: true
+- incubation:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: अहो! कोरोनाव्हायरस बद्दल मी कशी मदत करू?
+  utter_corona:
+  - text: कोविड-1१ हा एक नवीन आजार आहे जो आपल्या फुफ्फुसांवर आणि वायुमार्गावर परिणाम करू शकतो. हे कोरोनाव्हायरस नावाच्या विषाणूमुळे होते. कोविड-19 हा डिसेंबर 2019 मध्ये चीनमध्ये उदयास आलेल्या कोरोनाव्हायरसमुळे उद्भवणारा आजार आहे.
+  utter_symptoms:
+  - text: कोविड -1१ लक्षणे च्या लक्षणांमध्ये खोकला, ताप आणि श्वास लागणे यांचा समावेश आहे.
+  utter_concern:
+  - text: होय, अलिकडील माहितीवरून असे दिसते की कोविड -1१ व्यक्ती व्यक्तीकडून दुसर्‍या व्यक्तीकडे जाऊ शकते. समुदाय प्रसार देखील पाहिले जात आहे. समुदायाचा प्रसार म्हणजे एखाद्या विशिष्ट क्षेत्रात लोकांना विषाणूची लागण झाली आहे ज्यात अशा लोकांचा समावेश आहे की ज्यांना ते कसे किंवा कोठे संक्रमण झाले याची खात्री नसते. कोव्हीड -1१ चा संपूर्ण चीन आणि अमेरिकेसह इतर 100 देशांमध्ये आढळून आला आहे.
+  utter_prevent:
+  - text: 'आपले हात वारंवार आणि नख किमान 20 सेकंद धुवा, साबण आणि पाणी उपलब्ध नसल्यास अल्कोहोल-आधारित हँड सॅनिटायझर वापरा. टिशूने खोकला आणि शिंकण्याने झाकून टाका, मग ऊती कचर्‍यामध्ये टाका. आपले डोळे, नाक किंवा तोंड न धुतलेल्या हातांनी स्पर्श करणे टाळा. आपण आजारी असताना घरी रहा. लोक वारंवार स्पर्श करतात अशा पृष्ठभाग आणि वस्तू स्वच्छ आणि निर्जंतुक करतात. कोरोनाव्हायरसच्या संपर्कात येण्यापासून रोखण्यासाठी आपला चेहरा मुखवटासह झाकून घ्या. '
+  utter_Vaccination:
+  - text: होय, तेथे लस उपलब्ध आहे
+  utter_incubation:
+  - text: It appears that symptoms are showing up in people within 14 days of exposure to the virus.
+  utter_thanks:
+  - text: आपले स्वागत आहे आणि सुरक्षित रहा.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'तुम्हाला उत्तेजन देण्यासाठी काहीतरी येथे आहे:'
+  utter_did_that_help:
+  - text: की तुला मदत केली?
+  utter_happy:
+  - text: छान, पुढे जा!
+  utter_goodbye:
+  - text: राम राम
+  utter_iamabot:
+  - text: मी एक बॉट आहे, जो रसाने समर्थित आहे.
+actions:
+- utter_greet
+- utter_corona
+- utter_symptoms
+- utter_concern
+- utter_prevent
+- utter_incubation
+- utter_Vaccination
+- utter_thanks
+- utter_iamabot
+- utter_goodbye
+forms: {}
+e2e_actions: []

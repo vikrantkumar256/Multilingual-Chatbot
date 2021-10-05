@@ -1,0 +1,140 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: what_is_corona
+  examples: |
+    - I wanna know about corona virus?
+    - tell me something about coronavirus
+    - what is coronavirus?
+    - what is corona virus
+    - what is corona
+    - what is this corona virus which everyone is worried about?
+
+- intent: symptoms
+  examples: |
+    - What are the symptoms of it?
+    - what are its symptoms
+    - how to verify that i am suffering from coronavirus
+    - any specific symptoms
+
+- intent: concern
+  examples: |
+    - Is it a matter of concern?
+    - Is it a serious issue?
+    - Is this a major cause?
+
+- intent: prevention
+  examples: |
+    - how to prevent ourselves from getting in contact with corona virus?
+    - what are the steps to prevent ourselves from getting in contact with coronavirus?
+    - can you tell me how should I protect myself?
+
+- intent: Vaccination
+  examples: |
+    - Is there any treatment available for it
+    - What about the vaccination
+    - what medicine should I use if i got infected with coronavirus?
+
+- intent: incubation
+  examples: |
+    - what is the incubation period of COVID-19
+    - what is the incubation period for it?
+    - Is there any incubation period for it?
+
+- intent: thanks
+  examples: |
+    - Ok, thanks for awaring me about this serious issue.
+    - Thank you so much for awaring me.
+    - Thanks a lot.
+    - Thanks
+    - Tnank you
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

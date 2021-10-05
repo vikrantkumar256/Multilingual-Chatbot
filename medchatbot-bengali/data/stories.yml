@@ -1,0 +1,77 @@
+version: "2.0"
+
+stories:
+
+- story: happy greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: happy greet 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: happy path
+  steps:
+  - intent: what_is_corona
+  - action: utter_corona
+  - intent: concern
+  - action: utter_concern
+
+- story: symptoms
+  steps:
+  - intent: symptoms
+  - action: utter_symptoms
+  - intent: thanks
+  - action: utter_thanks
+
+- story: preventions
+  steps:
+  - intent: prevention
+  - action: utter_prevent
+
+- story: happy Vaccination
+  steps:
+  - intent: Vaccination
+  - action: utter_Vaccination
+
+- story: happy incubation
+  steps:
+  - intent: incubation
+  - action: utter_incubation
+
+- story: happy thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

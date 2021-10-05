@@ -1,0 +1,88 @@
+version: '3.0'
+services:
+    medchatbot-english:
+        image: rasa/rasa:2.7.1
+        ports:
+            - 5005:5005
+        volumes:
+            - ./medchatbot-english:/app
+        command: run --enable-api --cors "*"
+            # - run
+    medchatbot-hindi:
+        image: rasa/rasa:2.7.1
+        ports:
+            - 5006:5005
+        volumes:
+            - ./medchatbot-hindi:/app
+        command: run --enable-api --cors "*"
+
+    medchatbot-marathi:
+        image: rasa/rasa:2.7.1
+        ports:
+            - 5007:5005
+        volumes:
+            - ./medchatbot-marathi:/app
+        command: run --enable-api --cors "*"
+
+    medchatbot-tamil:
+        image: rasa/rasa:2.7.1
+        ports:
+            - 5008:5005
+        volumes:
+            - ./medchatbot-tamil:/app
+        command: run --enable-api --cors "*"
+
+    medchatbot-telugu:
+        image: rasa/rasa:2.7.1
+        ports:
+            - 5009:5005
+        volumes:
+            - ./medchatbot-telugu:/app
+        command: run --enable-api --cors "*"
+
+    medchatbot-bengali:
+        image: rasa/rasa:2.7.1
+        ports:
+            - 5010:5005
+        volumes:
+            - ./medchatbot-bengali:/app
+        command: run --enable-api --cors "*"
+
+    medchatbot-kannad:
+        image: rasa/rasa:2.7.1
+        ports:
+            - 5011:5005
+        volumes:
+            - ./medchatbot-kannad:/app
+        command: run --enable-api --cors "*"
+
+            # - run
+    # if want to run custom action server then
+    # action-server2:
+    #     image: rasa/rasa-sdk:1.10.3
+    #     volumes:
+    #         - ./medchatbot-english:/app/actions
+    #     ports:
+    #         - 5056:5055
+    
+    nginx:
+        container_name: nginx_serv
+        image: nginx
+        ports:
+        - 85:80
+        - 443:443
+        depends_on: 
+        - medchatbot-english
+        - medchatbot-hindi
+        - medchatbot-marathi
+        - medchatbot-tamil
+        - medchatbot-telugu
+        - medchatbot-bengali
+        - medchatbot-kannad
+        volumes:
+        - ./nginx:/etc/nginx/conf.d
+        #I kept my SSL certs in a certs folder in project directory (Make sure to include this in .gitignore)
+        # - ./certs:/etc/letsencrypt/live/aman.today
+        # - ./certs/medulla:/etc/letsencrypt/live/medulla.aman.today
+
+

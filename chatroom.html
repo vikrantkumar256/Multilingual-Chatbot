@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <div>
+    <select class="form-select language-selector" data-width="fit">
+      <option data-content=' English' value="0" selected>English</option>
+      <option  data-content=' Hindi' value="1">Hindi</option>
+      <option data-content=' Marathi' value="2">Marathi</option>
+      <option data-content=' Tamil' value="3">Tamil</option>
+      <option data-content=' Telugu' value="4">Telugu</option>
+      <option data-content=' Bengali' value="5">Bengali</option>
+      <option data-content=' Kannad' value="6">Kannad</option>
+  </select>
+  </div>
+  <div class="chat-container"></div>
+  <script
+    src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js" />
+  </script>
+  <script type="text/javascript">
+    $('.language-selector').change(function(){
+      const langval = $(this).val();
+      var hostIP = "http://localhost:5005";
+      var lang = "en-US"
+      switch(langval)
+      {
+        case '0':
+          hostIP = "http://localhost:5005";
+          lang = "en-US";
+          break;
+        case '1':
+          hostIP = "http://localhost:5006";
+          lang = "hi-IN";
+          break;
+        case '2':
+          hostIP = "http://localhost:5007";
+          lang = "mr";
+          break;
+        case '3':
+          hostIP = "http://localhost:5008";
+          lang = "ta-IN";
+          break;
+        case '4':
+          hostIP = "http://localhost:5009";
+          lang = "te-IN";
+          break;
+        case '5':
+          hostIP = "http://localhost:5010";
+          lang = "bengali";
+          break;
+        case '6':
+          hostIP = "http://localhost:5011";
+          lang = "kannad";
+          break;
+        default:
+          hostIP = "http://localhost:5005";
+          lang = "en-US";
+          break;
+      }
+      var chatroom = new window.Chatroom({
+        host: hostIP,
+        title: "Chat with MedChat",
+        container: document.querySelector(".chat-container"),
+        welcomeMessage: "Hi, I am MedChat. How may I help you?",
+        speechRecognition: lang,
+        voiceLang: lang
+      });
+      chatroom.openChat();
+    });
+    var chatroom = new window.Chatroom({
+      host: "http://localhost:5005",
+      title: "Chat with MedChat",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "Hi, I am MedChat. How may I help you?",
+      speechRecognition: "en-US",
+      voiceLang: "en-US"
+    });
+    chatroom.openChat();
+  </script>
+  
+  
+</body>
+
+</html>
